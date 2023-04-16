@@ -29,7 +29,15 @@ public class Main extends ListenerAdapter {
         copiumwords.add("virus");
         copiumwords.add("rat");
         copiumwords.add("trojan");
-        copiumwords.add("hack");
+        copiumwords.add("spyware");
+        copiumwords.add("adware");
+        copiumwords.add("malicious");
+        copiumwords.add("malware");
+        copiumwords.add("hijacking");
+        copiumwords.add("ransomware");
+        copiumwords.add("worm");
+        copiumwords.add("miner");
+        copiumwords.add("rootkit");
         JDABuilder.createDefault(token)
                 .enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.MESSAGE_CONTENT)
                 .enableCache(CacheFlag.EMOJI)
@@ -40,7 +48,7 @@ public class Main extends ListenerAdapter {
     @Override
     public void onReady(ReadyEvent event){
         JDA = event.getJDA();
-        JDA.getPresence().setActivity(Activity.playing("with myself"));
+        JDA.getPresence().setActivity(Activity.playing("NeptuniumClient"));
         System.out.println("Loaded!");
         JDA.upsertCommand("whatthedevils", "wtd gif");
         JDA.upsertCommand("booleanmeme", "what does a boolean mean");
